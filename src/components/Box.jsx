@@ -5,7 +5,8 @@ import styled from "styled-components";
 const StyledBox = styled.div`
   width: 100px;
   height: 100px;
-  background-color: "gray";
+  background-color: ${(props) => (props.$active ? "blue" : "gray")};
+  // props 로 $active 와 onClick 이 있음. 거기서 $active 로 조건부 스타일링.
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,8 +15,8 @@ const StyledBox = styled.div`
   font-size: 20px;
 `;
 
-function Box({ active, onClick }) {
-  return <StyledBox $active={active} onClick={onClick} />;
+function Box({ $active, onClick }) {
+  return <StyledBox $active={$active} onClick={onClick} />;
 }
 
 export default Box;
