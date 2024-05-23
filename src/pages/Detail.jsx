@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Detail({ path }) {
-  const location = useLocation();
-  console.log(location.pathname);
+  const params = useParams();
+  console.log(`params.id: ${params.id}`);
 
   return (
     <div>
