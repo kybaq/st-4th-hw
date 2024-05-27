@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Detail({ path }) {
   const params = useParams();
+  console.log(params);
   console.log(`params.id: ${params.id}`);
 
   return (
